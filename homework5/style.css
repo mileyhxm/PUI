@@ -64,7 +64,7 @@ body {
 }
   
 #site-description {
-    font-family: DM Sans;
+    font-family: 'DM Sans',serif;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
@@ -299,7 +299,7 @@ a {
     border: none;
     text-align: left;
     outline: none;
-    font-size: 16x;
+    font-size: 16px;
     font-weight: bold;
     font-family:'DM Sans',sans-serif;
     margin-top: 40px;
