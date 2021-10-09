@@ -179,13 +179,11 @@ a {
 
 .grid {
     padding-left:100px;
-    padding-right:100px;
-
     display: grid;
-    grid-template-columns: 295px 452px 452px;
+    grid-template-columns: 24% 32% 32%;
     box-shadow:0px 0px 0px 1px black inset;
     background-color: white;
-    column-gap: 20px;
+    column-gap: 24px;
     margin-bottom: 60px;
 }
 
