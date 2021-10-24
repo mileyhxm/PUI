@@ -259,6 +259,7 @@ a {
     margin-bottom: 8px;
     margin-top: 24px;
     font-weight: bold;
+    color:#4f4f4f;
 }
 
 .selector {
@@ -317,7 +318,7 @@ a {
   }
   
   /* Style the collapsible content. Note: hidden by default */
-  .collapsible-content {
+.collapsible-content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
@@ -325,20 +326,44 @@ a {
     font-size: 14px;
   }
 
-.radio-btn {
-    display: block;
-    box-shadow:0px 0px 0px 1px black inset;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    /* padding: 0.5em; */
-}
-.radio-btn :hover {
-    background-color: #333333;
-    color: white;
+input[type='radio'][name='glazing'] {
+    display:none;
 }
 
-.box-radio {
+input[type='radio'][name='count'] {
+    display:none;
+}
+
+.radio-btn {
+    display: block;
+    width:120px;
+    box-shadow:0px 0px 0px 1px black inset;
+    padding:10px;
+    border: none;
+    cursor:pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+input[type='radio'][name='glazing']:checked + .radio-btn {
+    background-color:black;
+    color:white;
+}
+
+input[type='radio'][name='glazing']:hover + .radio-btn {
+    box-shadow:0px 0px 0px 1.5px #EF5DA8 inset;
+}
+
+input[type='radio'][name='count']:checked + .radio-btn {
+    background-color:black;
+    color:white;
+}
+
+input[type='radio'][name='count']:hover + .radio-btn {
+    box-shadow:0px 0px 0px 1.5px #EF5DA8 inset;
+}
+
+/* .box-radio {
     display: block;
     padding: 1em 2em;
     margin: 0.5em;
@@ -346,16 +371,14 @@ a {
     color: dark;
     border-radius: 0.25em;
     background: light;
-    /* box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22); */
     transition: 0.3s;
     user-select: none;
-}
+}  */
 
-.box-radio:checked {
+/* .box-radio:checked {
     background-color: #333333;
     color:white;
-
-}
+} */
 
 /* shopping cart starts */
 #cart{
