@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
+    <script src="main.js" type="text/javascript" defer></script>
 </head>
 
-<body>
+<body style="background-image: url('assets/home-bg.png');">
     <div class="container">
         <div class="item">
 
@@ -33,7 +34,10 @@
                 </ul>
             </nav>
             
-            <a href="cart.html"><img id="shopping-cart" src="assets/Cart.png" alt="shopping cart" style="width:32px;"></a>
+            <div id="shopping-cart">
+                <a href="cart.html"><img src="assets/Cart.png" alt="shopping cart" style="width:32px;"></a>
+                <span id="cart-count" onload="updateCart()">0</span>
+            </div>
             
         </div>
 

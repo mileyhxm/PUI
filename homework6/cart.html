@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
+    <script src="main.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -32,90 +33,118 @@
                     <li class="nav-item">location</li>
                 </ul>
             </nav>
-
-            <a href="cart.html"><img id="shopping-cart" src="assets/Cart.png" alt="shopping cart" style="width:32px;"></a>
-        </div>
-
-    <div id="cart">
-        <div class="cart-item">
-            <div class="cart-item-up">
-                <img class="item-image" src="assets/original.png" width=80> 
-                <div class="roll-type">
-                    <span>Original</span>
-                    
-                    <select name="glazing" id="glazing">
-                        <option value="none">None</option>
-                        <option value="sugar milk">Sugar Milk</option>
-                        <option value="vanilla milk">Vanilla Milk</option>
-                        <option value="double chocolate">Double Chocolate</option>
-                    </select>
-
-                </div>
-                
+            <div id="shopping-cart">
+                <a href="cart.html"><img src="assets/Cart.png" alt="shopping cart" style="width:32px;"></a>
+                <span id="cart-count" onload="updateCart()">0</span>
             </div>
-
-            <div class="cart-item-down">
-                <hr class="solid" style="border: 0; border-top: 1px solid #000;">
-                <select name="count" id="count">
-                    <option value="1ct">1 ct</option>
-                    <option value="3ct">3 ct</option>
-                    <option value="6ct">6 ct</option>
-                    <option value="12ct">12 ct</option>
-                </select>
-
-                <div class="right-aligned">
-                    <span>$5</span>
-                </div>
+            
+            <div id="cart-message">
+                <p> Added to cart! </p>
             </div>
             
         </div>
-
-        <div class="cart-item">
-            <div class="cart-item-up">
-                <img class="item-image" src="assets/original.png" width=80> 
-                <div class="roll-type">
-                    <span>Original</span>
-                    
-                    <select name="glazing" id="glazing">
-                        <option value="none">None</option>
-                        <option value="sugar milk">Sugar Milk</option>
-                        <option value="vanilla milk">Vanilla Milk</option>
-                        <option value="double chocolate">Double Chocolate</option>
-                    </select>
-
-                </div>
-                
-            </div>
-
-            <div class="cart-item-down">
-                <hr class="solid" style="border: 0; border-top: 1px solid #000;">
-                <select name="count" id="count">
-                    <option value="1ct">1 ct</option>
-                    <option value="3ct">3 ct</option>
-                    <option value="6ct">6 ct</option>
-                    <option value="12ct">12 ct</option>
-                </select>
-
-                <div class="right-aligned">
-                    <span>$5</span>
-                </div>
-            </div>
-            
-        </div>
-
-
-
-        <!-- <div class="cart-item" id="product-template">
-
-            <img class="product-img" src="" onerror="this.src='assets/original.png'">
-            <div class="product-info">
-              <div class="product-name">Watermelon</div>
-              <div class="product-price">$10.00</div>
-            </div>
-            <button class="btn-remove-item">X</button>
-    
-        </div> -->
-
         
+        <div id="main">
+            
+            <div id="cart">
+                <h4 style="margin:0px;">Shopping cart</h4>
+                
+                <div class="cart-item">
+                    <div class="cart-item-up">
+                        <img class="item-image" src="assets/original.png" width=80> 
+                        <div class="roll-type">
+                            <span>Original</span>
+                            
+                            <select name="glazing" id="glazing">
+                                <option value="none">None</option>
+                                <option value="sugar milk">Sugar Milk</option>
+                                <option value="vanilla milk">Vanilla Milk</option>
+                                <option value="double chocolate">Double Chocolate</option>
+                            </select>
+
+                        </div>
+                        <button class="close-button" type="button">
+                           Remove
+                        </button>
+                    </div>
+
+                    <div class="cart-item-down">
+                        <hr class="solid">
+                        <select name="count" id="count">
+                            <option value="1ct">1 ct</option>
+                            <option value="3ct">3 ct</option>
+                            <option value="6ct">6 ct</option>
+                            <option value="12ct">12 ct</option>
+                        </select>
+
+                        <div class="right-aligned">
+                            <span>$5</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="cart-item">
+                    <div class="cart-item-up">
+                        <img class="item-image" src="assets/original.png" width=80> 
+                        <div class="roll-type">
+                            <span>Original</span>
+                            
+                            <select name="glazing" id="glazing">
+                                <option value="none">None</option>
+                                <option value="sugar milk">Sugar Milk</option>
+                                <option value="vanilla milk">Vanilla Milk</option>
+                                <option value="double chocolate">Double Chocolate</option>
+                            </select>
+
+                        </div>
+                        <button class="close-button" type="button">
+                            Remove
+                        </button>
+                    </div>
+
+                    <div class="cart-item-down">
+                        <hr class="solid">
+                        <select name="count" id="count">
+                            <option value="1ct">1 ct</option>
+                            <option value="3ct">3 ct</option>
+                            <option value="6ct">6 ct</option>
+                            <option value="12ct">12 ct</option>
+                        </select>
+
+                        <div class="right-aligned">
+                            <span>$5</span>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
+
+            </div>
+            <div id="summary">
+                <h4>Order Summary</h4>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span class="right-aligned" style="width:100px;">$10</span>
+                </div>
+                <div class="summary-row">
+                    <span>Estimated tax & fees</span>
+                    <span class="right-aligned" style="width:100px;">$0.6</span>
+                </div>
+                <div class="summary-row">
+                    <span>Estimated shipping</span>
+                    <span class="right-aligned" style="width:100px;">$5</span>
+                </div>
+                <hr class="solid">
+                <div class="summary-row">
+                    <span style="font-weight: bold;">Subtotal</span>
+                    <span class="right-aligned" style="width:100px; font-weight: bold;">$15.6</span>
+                </div>
+                <button class="wide-button"> Check out now </button>
+            </div>
+        </div>
+    </div>
+
 
 </body>

@@ -1,3 +1,6 @@
+// window.addEventListener("load", function(event) {
+//     console.log(document.getElementsByClassName('add-cart').length);
+// });
 
 // selector display changes
 function showGlazeSelection() {
@@ -44,16 +47,58 @@ function addCartMessage() {
 
     window.setTimeout("closeCartMessage();", 3000);
 
+    // console.log(JSON.parse(localStorage.getItem("cartCount")));
+    // cartCount.innerHTML = JSON.parse(localStorage.getItem("cartCount"));
+
 }
 
-function cartCount() {
-    count = document.getElementById("cart-count");
-    count.innerHTML = "(" + parseInt()
-}
+
 
 // cart message ends
 
+var cartItems = {
+    count:0,
+    total:0,
+    items: []
+}
 
-var cartCount = document.getElementById("cart-count");
-var storageCartCount = localStorage.setItem("cartCount","");
+let carts = document.getElementsByClassName('add-cart');
 
+console.log(carts);
+
+for (let i=0; i < carts.length; i++) {
+    console.log("my loop");
+    carts[i].addEventListener('click',() => {
+        cartNumbers();
+    })
+    console.log(carts.length);
+}
+
+function onloadCartNumbers() {
+    let productNumbers = sessionStorage.getItem('cartNumbers');
+
+    if (productNumbers) {
+        document.getElementById('cart-count').innerHTML = productNumbers;
+    }
+}
+
+function cartNumbers() {
+    let productNumbers = sessionStorage.getItem('cartNumbers');
+    
+    productNumbers = parseInt(productNumbers);
+
+    console.log(productNumbers);
+
+    if (productNumbers) {
+        sessionStorage.setItem('cartNumbers', productNumbers +1 );
+        document.getElementById('cart-count').innerHTML = productNumbers + 1;
+    } else {
+        sessionStorage.setItem('cartNumbers', 1);
+        document.getElementById('cart-count').innerHTML = 1;
+    }
+
+    
+}
+
+
+onloadCartNumbers();
