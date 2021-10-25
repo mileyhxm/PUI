@@ -1,8 +1,3 @@
-// window.addEventListener("load", function(event) {
-//     console.log(document.getElementsByClassName('add-cart').length);
-// });
-
-// selector display changes
 function showGlazeSelection() {
     var ele = document.getElementsByName('glazing');
 
@@ -46,10 +41,6 @@ function addCartMessage() {
     message.style.display = "block";
 
     window.setTimeout("closeCartMessage();", 3000);
-
-    // console.log(JSON.parse(localStorage.getItem("cartCount")));
-    // cartCount.innerHTML = JSON.parse(localStorage.getItem("cartCount"));
-
 }
 
 
@@ -99,6 +90,5 @@ function cartNumbers() {
 
     
 }
-
 
 onloadCartNumbers();

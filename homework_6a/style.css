@@ -334,7 +334,7 @@ a {
     background-color: #ccc;
   }
   
-  /* Style the collapsible content. Note: hidden by default */
+/* Style the collapsible content. Note: hidden by default */
 .collapsible-content {
     padding: 0 18px;
     display: none;
@@ -386,7 +386,6 @@ input[type='radio'][name='count']:hover + .radio-btn {
     flex-direction: column;
     gap:20px;
     margin-left:100px;
-    /* margin-top: 40px; */
     width:800px;
 }
 
@@ -469,3 +468,5 @@ select#count {
     position:absolute;
     left:0px;
 }
+
+/* shopping cart ends */
