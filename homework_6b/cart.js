@@ -115,23 +115,6 @@ function showProductInCart(product) {
     console.log(totalPrice);
 }
 
-
-function setSelectedIndex(s, v) {
-    console.log(s.options.length);
-    for ( var i = 0; i < s.options.length; i++ ) {
-        // console.log(v);
-        // console.log(s.options[i].value);
-        if ( s.options[i].value == v ) {
-            
-            // console.log(s.options[i].value);
-            // console.log(v);
-            console.log('match');
-            
-            return i;
-        }
-    }
-}
-
 function updatePrice(product) {
     const totalPrice = JSON.parse(localStorage.getItem('totalPrice'));
     const newTotal = totalPrice + product.price;
