@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    
+<head>
+    <title>Bunbun Bakeshop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&display=swap" rel="stylesheet">
+    <script src="main.js" type="text/javascript" defer></script>
+</head>
+
+<body style="background-image: url('assets/home-bg.png');">
+    <div class="container">
+        <div class="item">
+
+            <!-- navigation bar -->
+            <nav class="nav-bar">
+                <ul class="nav-li">
+                    <li class="nav-item">
+                        <a href="index.html"><img src="assets/walnut.png" alt="walnut" style="width:64px;"></a>
+                    </li>
+                    <li class="nav-item current-page">
+                        <a href="index.html" style="text-decoration: none;">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="shop.html" style="text-decoration: none;">shop</a>
+                    <li class="nav-item">about</li>
+                    <li class="nav-item">location</li>
+                </ul>
+            </nav>
+            
+            <div id="shopping-cart">
+                <a href="cart.html"><img src="assets/Cart.png" alt="shopping cart" style="width:32px;"></a>
+                <span id="cart-count" onload="updateCart()">0</span>
+            </div>
+            
+        </div>
+
+        <div class="main-home item">
+
+            <!-- left section of the home page (including name & description) -->
+
+            <div class="left">
+                <img src="assets/home-logo.png" alt="name of Bun Bun Bakeshop" style="width:580px">
+                <h2>Best cinnamon rolls in town 
+                    <br>located in Pittsburgh, PA</h2>    
+            </div>
+
+
+            <!-- right section of the home page (wide buttons) -->
+            <div class="right">
+                <button type="button" class="block"><a href="shop.html" style="text-decoration: none;">Order online →</a></button>
+                <button type="button" class="block">Visit in store →</button>
+                
+            </div>
+        </div>
+
+
+        <!-- image gallery -->
+        
+        <div class="item">
+            
+            <div id="home-gallery">
+                <img src="assets/detail1.png" alt="image of cinnamon rolls" style="width:290px;">
+                <img src="assets/detail2.png" alt="image of cinnamon rolls" style="width:290px;">
+                <img src="assets/detail3.png" alt="image of cinnamon rolls" style="width:290px;">
+                <img src="assets/detail4.png" alt="image of cinnamon rolls" style="width:290px;">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
