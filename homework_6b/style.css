@@ -31,6 +31,7 @@ hr {
     width: 100%;               
     background-color:#000;
     height: .5px;
+
 }
 
 body {
@@ -103,6 +104,7 @@ body {
     text-align: left;
     font-family:'DM Sans', serif;
     margin-top:32px;
+    border-radius: 4px;
   }
 
 .block:hover {
@@ -382,6 +384,7 @@ input[type='radio'][name='count'] {
     cursor:pointer;
     text-align: center;
     transition: 0.3s;
+    border-radius: 2px;
 }
 
 input[type='radio'][name='glazing']:checked + .radio-btn {
@@ -428,8 +431,11 @@ input[type='radio'][name='count']:hover + .radio-btn {
 }
 
 .in-cart-count {
-    margin-left: 20px;
+    margin-left: 20px;  
+}
 
+.in-cart-name {
+    font-weight: bold;
 }
 
 select#count {

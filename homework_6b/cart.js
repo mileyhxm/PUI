@@ -1,6 +1,5 @@
 const storedValue = JSON.parse(localStorage.getItem('savedCart'));
 const cart = storedValue ? storedValue : [];
-// var totalPrice = JSON.parse(localStorage.getItem('totalPrice'));
 const addButton = document.getElementById('addButton');
 
 let cartContainer = document.getElementById('cart-container');
@@ -22,8 +21,7 @@ function Product(name, glazing, quantity) {
         this.price = 30;
     } else {
         this.price = 60;
-    }
-    
+    } 
 }
 
 //add product to cart
@@ -34,6 +32,7 @@ function addToCart(productName, productGlaze, productQuantity) {
     console.log("added");
 }
 
+//remove item
 function removeItem(btn) {
     const parent = btn.parentNode;
 
@@ -66,16 +65,17 @@ function loadCart() {
 
     if ( cart.length > 0 ) {
         for (i = 0; i < cart.length; i ++) {
-
             showProductInCart(cart[i]);
         }
 
     }
 }
 
-
 function updateCart() {
-    const productName = 'Original';
+    // const productName = 'Original';
+    const productName = document.getElementById('product-name').innerText;
+    console.log(productName);
+
     glazing = document.getElementsByName('glazing');
     count = document.getElementsByName('count');
     for(i = 0; i < glazing.length; i++) {
@@ -99,12 +99,26 @@ function updateCart() {
     
 }
 
+//load products in cart
 function showProductInCart(product) {
     const clone = template.content.cloneNode(true);
     clone.querySelector('.in-cart-name').innerText = product.name;
     clone.querySelector('.in-cart-glaze').innerText = product.glazing;
     clone.querySelector('.in-cart-count').innerText = product.quantity;
     clone.querySelector('.item-total').innerText = product.price;
+    
+    console.log(clone.querySelector('#item-image'));
+
+    if (product.name == "Original" || product.name == "Original (Gluten-Free)") {
+        clone.querySelector('#item-image').src = "assets/original.png";
+    } else if (product.name == "Pumpkin Spice") {
+        clone.querySelector('#item-image').src = "assets/pumpkin.png";
+    } else if (product.name == "Walnut" || product.name == "Caramel Pecan") {
+        clone.querySelector('#item-image').src = "assets/walnut.png";
+    } else {
+        clone.querySelector('#item-image').src = "assets/blackberry.png";
+    }
+
     cartContainer.appendChild(clone);
 
     const totalPrice = JSON.parse(localStorage.getItem('totalPrice'));
@@ -123,6 +137,7 @@ function updatePrice(product) {
     localStorage.setItem("totalPrice", newTotal);
 }
 
+//show empty cart if no item has been added
 function showEmpty() {
     const emptyMessage = document.getElementById('main-empty');
     const regCart = document.getElementById('main');
