@@ -203,6 +203,19 @@ p {
 
 }
 
+/* closing section */
+#closing {
+    width:60em;
+    color:white;
+
+    display:flex;
+}
+
+#closing h2{
+    color:white;
+    width:100%;
+}
+
 /* details page */
 #detail1 {
     background-color: #2E65F3;
@@ -211,6 +224,19 @@ p {
 #detail2 {
     background-color: #612EF3;
 }
+
+#detail3 {
+    background-color:#A852FF;
+}
+
+#detail4 {
+    background-color:#D64DAF;
+}
+
+#detail5 {
+    background-color:#D64D4D;
+}
+
 
 .card-background {
     background-color:white;
