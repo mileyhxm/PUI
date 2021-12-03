@@ -13,11 +13,11 @@ card.addEventListener('scroll', function() {
     } else if (scrollLeft >= scrollWidth * 1 && scrollLeft < scrollWidth * 2) {
         document.body.style.background = "#612EF3";
     } else if (scrollLeft >= scrollWidth * 2 && scrollLeft < scrollWidth * 3) {
-        document.body.style.background = "#A852FF";
+        document.body.style.background = "#8e1dff";
     } else if (scrollLeft >= scrollWidth * 3 && scrollLeft < scrollWidth * 4) {
-        document.body.style.background = "#D64DAF";
+        document.body.style.background = "#D22CA3";
     } else if (scrollLeft >= scrollWidth * 4 && scrollLeft < scrollWidth * 5) {
-        document.body.style.background = "#D64D4D";
+        document.body.style.background = "#d34242";
     } else if (scrollLeft >= scrollWidth * 5 && scrollLeft < scrollWidth * 6) {
         document.body.style.background = "#E86329";
     } else {
