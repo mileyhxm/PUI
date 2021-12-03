@@ -1,0 +1,34 @@
+p {
+    font-family: source-han-serif-sc, serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-family: source-han-serif-sc, serif;
+    font-size: 32px;
+}
+
+h2 {
+    font-family: source-han-serif-sc, serif;
+    font-size: 24px;
+}
+
+body {
+    background-color: #F5F2E9;
+}
+
+.main {
+    margin: 60px;
+    display: flex;
+
+}
+
+.two-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.color-row {
+    width: 
+}

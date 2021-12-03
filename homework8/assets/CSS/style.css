@@ -69,6 +69,12 @@ p {
     line-height: 1.5em;
 }
 
+span {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5em;
+}
 
 /* cards */
 .cards-container {
@@ -109,7 +115,6 @@ p {
     display:flex;
     /* overflow: hidden; */
     position:relative;
-
     min-width: 17.5em;
 /* 
     display: inline-block; */
@@ -183,6 +188,10 @@ p {
     background-color:#D64D4D;
 }
 
+#card6 {
+    background-color:#E86329;
+}
+
 /* responsive media query */
 
 @media screen and (max-width:40em){
@@ -204,16 +213,40 @@ p {
 }
 
 /* closing section */
-#closing {
-    width:60em;
-    color:white;
+.closing {
+    margin-left: 6.25em;
+    min-width:30em;
+    max-width:30em;
+    color: #111111;
 
     display:flex;
+    flex-direction: column;
+    gap:2em;
 }
 
-#closing h2{
-    color:white;
+.closing h2{
     width:100%;
+    color: #111111;
+}
+
+#reference-section {
+    /* display:flex;
+    flex-direction: column; */
+}
+
+.closing-subsection a {
+    text-decoration: underline;
+}
+
+.closing-subsection a:hover {
+    text-decoration: none;
+    background-color: black;
+    color:white;
+}
+
+.closing-subsection a:hover span{
+    background-color: black;
+
 }
 
 /* details page */
@@ -237,6 +270,9 @@ p {
     background-color:#D64D4D;
 }
 
+#detail6 {
+    background-color:#E86329;
+}
 
 .card-background {
     background-color:white;
@@ -302,6 +338,7 @@ button {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 300;
     font-size: 1.25em;
+    cursor: pointer;
 }
 
 
