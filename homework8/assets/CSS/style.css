@@ -1,16 +1,9 @@
-.emoji-marquee {
-    display: flex;
-    flex-direction: column;
-    gap:32px;
-    font-size: 32px;
-}
-
 body {
     display:flex;
     flex-direction: column;
     margin:0;
     transition: background 1.5s;
-    /* cursor: url(assets/eye-cursor.png), auto; */
+    /* cursor: url('../images/eye-cursor.png'), auto; */
 }
 
 .top-nav {
@@ -22,10 +15,9 @@ body {
 }
 
 .footer {
-    margin-left:6.25em;
+    margin-left:8.25em;
     position: relatvie;
 }
-
 
 
 h1 {
@@ -120,7 +112,6 @@ span {
     display: inline-block; */
 }
 
-
 .card-content {
     width:280px;
     height: 480px;
@@ -134,18 +125,23 @@ span {
     border-style: solid;
     border-width: 2px;
     border-color:black;
+    cursor: url('../images/eye-cursor.png'), auto;
+
 }
 
 .card-content:hover {
     top:-1.5em;
     left:-1.5em;
+
 }
+
 
 .card-thumbnail{
     max-width: 100%;
     max-height: 100%;
     object-fit:cover;
     filter: grayscale(100%);
+
 }
 
 .card-thumbnail:hover{
@@ -181,15 +177,15 @@ span {
 }
 
 #card4 {
-    background-color:#D22CA3;
+    background-color:#E758BF;
 }
 
 #card5 {
-    background-color:#d34242;
+    background-color:#FF7B73;
 }
 
 #card6 {
-    background-color:#E86329;
+    background-color:#F88237;
 }
 
 /* responsive media query */
@@ -217,7 +213,7 @@ span {
     margin-left: 6.25em;
     min-width:30em;
     max-width:30em;
-    color: #111111;
+    color: #000000;
 
     display:flex;
     flex-direction: column;
@@ -226,12 +222,12 @@ span {
 
 .closing h2{
     width:100%;
-    color: #111111;
+    color: #000000;
 }
 
-#reference-section {
-    /* display:flex;
-    flex-direction: column; */
+.closing h4{
+    font-weight: 600;
+    margin-bottom: 0.5em;
 }
 
 .closing-subsection a {
@@ -249,6 +245,10 @@ span {
 
 }
 
+#reference-section span{
+    padding-right:0.5em;
+}
+
 /* details page */
 #detail1 {
     background-color: #2E65F3;
@@ -263,15 +263,15 @@ span {
 }
 
 #detail4 {
-    background-color:#D22CA3;
+    background-color:#E758BF;
 }
 
 #detail5 {
-    background-color:#d34242;
+    background-color:#FF7B73;
 }
 
 #detail6 {
-    background-color:#E86329;
+    background-color:#F88237;
 }
 
 .card-background {
@@ -280,9 +280,6 @@ span {
     border-color: black;
     border-width: 2px;
     margin:6.25em;
-    /* margin-top:100px;
-    margin-bottom: 100px; */
-    /* height: 40em; */
     border-radius: 1.25em;
     display:flex;
     flex-direction: column;
@@ -341,6 +338,11 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: black;
+    color:white;
+    border-radius: 0.125em;
+}
 
 a {
     text-decoration: none;
@@ -360,6 +362,10 @@ a {
     margin-top: 2em;
     display: flex;
     justify-content: space-between;
+}
+
+#detail1 #bottom-row {
+    align-self:end;
 }
 
 .detail-image {
