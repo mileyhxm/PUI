@@ -27,7 +27,7 @@ card.addEventListener('scroll', function() {
         document.body.style.background = "#F88237";
         footer.style.color="#111111"
     } else {
-        document.body.style.background = "#ffe286";
+        document.body.style.background = "#FFD656";
         footer.style.color="#111111"
     }
 });

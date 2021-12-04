@@ -177,36 +177,17 @@ span {
 }
 
 #card4 {
-    background-color:#E758BF;
+    background-color:#D64DAF;
 }
 
 #card5 {
-    background-color:#FF7B73;
+    background-color:#D64D4D;
 }
 
 #card6 {
     background-color:#F88237;
 }
 
-/* responsive media query */
-
-@media screen and (max-width:40em){
-    .cards-container {
-        display:flex;
-        flex-direction: column;
-        padding-left:2em;
-        padding-right:2em;
-    }
-
-    .card {
-        width:auto;
-    }
-
-    .card-content{
-        width:auto;
-    }
-
-}
 
 /* closing section */
 .closing {
@@ -219,9 +200,9 @@ span {
     flex-direction: column;
     gap:2em;
 
-    background-color: rgba(255,255,255,0.8);
+    /* background-color: rgba(255,255,255,0.8);
     padding:2em;
-    border-radius: .5em;
+    border-radius: .5em; */
 }
 
 .closing h2{
@@ -253,6 +234,51 @@ span {
     padding-right:0.5em;
 }
 
+/* responsive media query */
+
+@media screen and (max-width:40em){
+    .cards-container {
+        display:flex;
+        flex-direction: column;
+        padding-left:2em;
+        padding-right:2em;
+    }
+
+    .card {
+        width:auto;
+    }
+
+    .card-content{
+        width:auto;
+    }
+
+    .card-text {
+        width: 100%;
+    }
+
+    .closing {
+        width:auto;
+        margin-left: 0;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        color:white;
+    }
+
+    .closing h2{
+        color:white;
+    }
+
+    .closing a {
+        color: white;
+    }
+
+    .footer {
+        align-self: center;
+        margin:0;
+    }
+
+}
+
 /* details page */
 #detail1 {
     background-color: #2E65F3;
@@ -267,11 +293,11 @@ span {
 }
 
 #detail4 {
-    background-color:#E758BF;
+    background-color:#D64DAF;
 }
 
 #detail5 {
-    background-color:#FF7B73;
+    background-color:#D64D4D;
 }
 
 #detail6 {
