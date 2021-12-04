@@ -24,7 +24,7 @@ card.addEventListener('scroll', function() {
         document.body.style.background = "#F48178";
         footer.style.color="#111111"
     } else if (scrollLeft >= scrollWidth * 5 && scrollLeft < scrollWidth * 6) {
-        document.body.style.background = "#FF834E";
+        document.body.style.background = "#F88237";
         footer.style.color="#111111"
     } else {
         document.body.style.background = "#ffe286";
